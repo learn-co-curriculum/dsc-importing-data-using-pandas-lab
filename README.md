@@ -21,7 +21,7 @@ Which should be saved like this if it were a csv (to avoid confusion with the co
 "ReviewerID","Rating","N_reviews","Review","VenueID"
 "123456","4","137","This restuarant was pretty good, we had a great time.","98765"
 
-Attempt to import the corrupt file, or at least a small preview of it. It is appropriately titled **Yelp_Reviews_corrupt.csv**. Then, write a function that loads as much as the file as possible until it hits an error. Once it hits the error, have the function save that many rows (up to the error) as a dataframe. Load the next part of the dataframe starting from just after the error row. Continue on until you have reached the end of the file and merge all of these into a single dataframe. Also return the indices of the corrupt rows from the original file.
+Attempt to import the corrupt file, or at least a small preview of it. It is appropriately titled Yelp_Reviews_corrupt.csv. Investigate some of the intricacies of skipping rows to then pass over this error and comment on what you think is going on.
 
 
 ```python
