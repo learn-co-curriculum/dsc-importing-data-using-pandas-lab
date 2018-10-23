@@ -20,17 +20,17 @@ df.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -197,17 +197,17 @@ df.tail()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -389,7 +389,7 @@ for row in df.index:
 
 
 ```python
-df1 = pd.read_csv('Data/Zipcode_Demos.csv', skiprows=1, nrows=45, usecols=[0,1,2])
+df1 = pd.read_csv('Data/Zipcode_Demos.csv', skiprows=[1], nrows=45, usecols=[0,1,2])
 df1.head()
 ```
 
@@ -397,26 +397,26 @@ df1.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>1</th>
-      <th>Unnamed: 1</th>
       <th>0</th>
+      <th>Average Statistics</th>
+      <th>Unnamed: 2</th>
     </tr>
   </thead>
   <tbody>
@@ -465,26 +465,26 @@ df1.tail()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>1</th>
-      <th>Unnamed: 1</th>
       <th>0</th>
+      <th>Average Statistics</th>
+      <th>Unnamed: 2</th>
     </tr>
   </thead>
   <tbody>
@@ -534,17 +534,17 @@ df2.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -725,6 +725,14 @@ except Exception as e:
 ```
 
 
+      File "<ipython-input-8-13f6e15364f1>", line 4
+        except Exception as e:
+             ^
+    IndentationError: expected an indented block
+
+
+
+
 ```python
 #Your code here
 try:
@@ -759,17 +767,17 @@ df1.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -869,17 +877,17 @@ df1.tail()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -987,7 +995,6 @@ print(len(df2))
 df2.head()
 ```
 
-    First failure at: 499
     498
 
 
@@ -995,17 +1002,17 @@ df2.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1108,57 +1115,57 @@ temp.head()
 
     ParserError                               Traceback (most recent call last)
 
-    <ipython-input-72-fee2cef35b3a> in <module>()
+    <ipython-input-13-6c179a8f3c47> in <module>()
     ----> 1 temp = pd.read_csv('Data/Yelp_Reviews_Corrupt.csv')
           2 print(len(temp))
           3 temp.head()
 
 
-    ~\Anaconda3wenv\lib\site-packages\pandas\io\parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, escapechar, comment, encoding, dialect, tupleize_cols, error_bad_lines, warn_bad_lines, skipfooter, skip_footer, doublequote, delim_whitespace, as_recarray, compact_ints, use_unsigned, low_memory, buffer_lines, memory_map, float_precision)
-        653                     skip_blank_lines=skip_blank_lines)
-        654 
-    --> 655         return _read(filepath_or_buffer, kwds)
-        656 
-        657     parser_f.__name__ = name
+    /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, escapechar, comment, encoding, dialect, tupleize_cols, error_bad_lines, warn_bad_lines, skipfooter, skip_footer, doublequote, delim_whitespace, as_recarray, compact_ints, use_unsigned, low_memory, buffer_lines, memory_map, float_precision)
+        707                     skip_blank_lines=skip_blank_lines)
+        708 
+    --> 709         return _read(filepath_or_buffer, kwds)
+        710 
+        711     parser_f.__name__ = name
 
 
-    ~\Anaconda3wenv\lib\site-packages\pandas\io\parsers.py in _read(filepath_or_buffer, kwds)
-        409 
-        410     try:
-    --> 411         data = parser.read(nrows)
-        412     finally:
-        413         parser.close()
+    /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in _read(filepath_or_buffer, kwds)
+        453 
+        454     try:
+    --> 455         data = parser.read(nrows)
+        456     finally:
+        457         parser.close()
 
 
-    ~\Anaconda3wenv\lib\site-packages\pandas\io\parsers.py in read(self, nrows)
-       1003                 raise ValueError('skipfooter not supported for iteration')
-       1004 
-    -> 1005         ret = self._engine.read(nrows)
-       1006 
-       1007         if self.options.get('as_recarray'):
+    /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in read(self, nrows)
+       1067                 raise ValueError('skipfooter not supported for iteration')
+       1068 
+    -> 1069         ret = self._engine.read(nrows)
+       1070 
+       1071         if self.options.get('as_recarray'):
 
 
-    ~\Anaconda3wenv\lib\site-packages\pandas\io\parsers.py in read(self, nrows)
-       1746     def read(self, nrows=None):
-       1747         try:
-    -> 1748             data = self._reader.read(nrows)
-       1749         except StopIteration:
-       1750             if self._first_chunk:
+    /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in read(self, nrows)
+       1837     def read(self, nrows=None):
+       1838         try:
+    -> 1839             data = self._reader.read(nrows)
+       1840         except StopIteration:
+       1841             if self._first_chunk:
 
 
-    pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader.read (pandas\_libs\parsers.c:10862)()
+    pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader.read()
 
 
-    pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._read_low_memory (pandas\_libs\parsers.c:11138)()
+    pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._read_low_memory()
 
 
-    pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._read_rows (pandas\_libs\parsers.c:11884)()
+    pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._read_rows()
 
 
-    pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._tokenize_rows (pandas\_libs\parsers.c:11755)()
+    pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._tokenize_rows()
 
 
-    pandas/_libs/parsers.pyx in pandas._libs.parsers.raise_parser_error (pandas\_libs\parsers.c:28765)()
+    pandas/_libs/parsers.pyx in pandas._libs.parsers.raise_parser_error()
 
 
     ParserError: Error tokenizing data. C error: Expected 10 fields in line 2331, saw 11
@@ -1179,17 +1186,17 @@ temp.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1289,17 +1296,17 @@ pd.read_csv('Data/Yelp_Reviews_Corrupt.csv', skiprows=len(df1)+len(df2), names=d
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
