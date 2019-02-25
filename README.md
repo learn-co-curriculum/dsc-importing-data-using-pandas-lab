@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, you'll get some practice with loading files with summary or metadata, and if you find that easy, the optional "level up" content covers loading data from a currupted csv file!
+In this lab, you'll get some practice with loading files with summary or metadata, and if you find that easy, the optional "level up" content covers loading data from a corrupted csv file!
 
 ## Objectives
 You will be able to:
@@ -27,14 +27,14 @@ All data files are stored in a folder titled 'Data'.
 
 ### Loading Corrupt CSV files
 
-Occassionally, you encountered some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is suppossed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
+Occasionally, you encountered some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
 
 ReviewerID,Rating,N_reviews,Review,VenueID
-123456,4,137,This restuarant was pretty good, we had a great time.,98765
+123456,4,137,This restaurant was pretty good, we had a great time.,98765
 
 Which should be saved like this if it were a csv (to avoid confusion with the commas in the Review text):
 "ReviewerID","Rating","N_reviews","Review","VenueID"
-"123456","4","137","This restuarant was pretty good, we had a great time.","98765"
+"123456","4","137","This restaurant was pretty good, we had a great time.","98765"
 
 Attempt to import the corrupt file, or at least a small preview of it. It is appropriately titled Yelp_Reviews_corrupt.csv. Investigate some of the intricacies of skipping rows to then pass over this error and comment on what you think is going on.
 
