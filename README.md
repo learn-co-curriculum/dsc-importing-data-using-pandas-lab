@@ -14,7 +14,7 @@ You will be able to:
 * Save information to csv and Excel files
 * Access data within a Pandas DataFrame (print() and .head())
 
-#  Loading Files with Summary or Meta Data
+##  Loading Files with Summary or Meta Data
 
 Load either of the files Zipcode_Demos.csv or Zipcode_Demos.xlsx. What's going on with this dataset? Clean it up into a useable format and describe the nuances with how the data is currently formatted.
 
@@ -400,7 +400,7 @@ for row in df.index:
 
     On row 1 there are 44 null values. The previous row had 45 null values.
     On row 46 there are 0 null values. The previous row had 44 null values.
-    
+
 
 
 ```python
@@ -717,7 +717,7 @@ df2.head()
 
 
 
-# Level-Up: Loading Corrupt CSV files
+## Level Up (Optional) - Loading Corrupt CSV files
 
 Occasionally, you encountered some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
 
@@ -744,7 +744,7 @@ except Exception as e:
         except Exception as e:
              ^
     IndentationError: expected an indented block
-    
+
 
 
 
@@ -758,7 +758,7 @@ except Exception as e:
 
     Error tokenizing data. C error: Expected 10 fields in line 2331, saw 11
     
-    
+
 
 
 ```python
@@ -776,7 +776,7 @@ df1.head()
 
     First failure at: 1962
     1961
-    
+
 
 
 
@@ -993,7 +993,7 @@ df1.tail()
 
 
 
-# Comments:
+## Comments:
 Be careful, even prior to the error, the last few entries look faulty here; these could very well be the spillovers of unencapsulated commas!
 
 
@@ -1011,7 +1011,7 @@ df2.head()
 ```
 
     498
-    
+
 
 
 
@@ -1134,7 +1134,7 @@ temp.head()
     ----> 1 temp = pd.read_csv('Data/Yelp_Reviews_Corrupt.csv')
           2 print(len(temp))
           3 temp.head()
-    
+
 
     /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, escapechar, comment, encoding, dialect, tupleize_cols, error_bad_lines, warn_bad_lines, skipfooter, skip_footer, doublequote, delim_whitespace, as_recarray, compact_ints, use_unsigned, low_memory, buffer_lines, memory_map, float_precision)
         707                     skip_blank_lines=skip_blank_lines)
@@ -1142,7 +1142,7 @@ temp.head()
     --> 709         return _read(filepath_or_buffer, kwds)
         710 
         711     parser_f.__name__ = name
-    
+
 
     /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in _read(filepath_or_buffer, kwds)
         453 
@@ -1150,7 +1150,7 @@ temp.head()
     --> 455         data = parser.read(nrows)
         456     finally:
         457         parser.close()
-    
+
 
     /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in read(self, nrows)
        1067                 raise ValueError('skipfooter not supported for iteration')
@@ -1158,7 +1158,7 @@ temp.head()
     -> 1069         ret = self._engine.read(nrows)
        1070 
        1071         if self.options.get('as_recarray'):
-    
+
 
     /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in read(self, nrows)
        1837     def read(self, nrows=None):
@@ -1166,25 +1166,25 @@ temp.head()
     -> 1839             data = self._reader.read(nrows)
        1840         except StopIteration:
        1841             if self._first_chunk:
-    
+
 
     pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader.read()
-    
+
 
     pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._read_low_memory()
-    
+
 
     pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._read_rows()
-    
+
 
     pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._tokenize_rows()
-    
+
 
     pandas/_libs/parsers.pyx in pandas._libs.parsers.raise_parser_error()
-    
+
 
     ParserError: Error tokenizing data. C error: Expected 10 fields in line 2331, saw 11
-    
+
 
 
 
@@ -1195,7 +1195,7 @@ temp.head()
 ```
 
     4651
-    
+
 
 
 
@@ -2140,3 +2140,7 @@ pd.read_csv('Data/Yelp_Reviews_Corrupt.csv', skiprows=len(df1)+len(df2), names=d
 </div>
 
 
+
+## Summary
+
+Congratulations, you now practiced your pandas-importing skills!
