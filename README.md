@@ -12,7 +12,7 @@ You will be able to:
 * Save information to csv and Excel files
 * Access data within a Pandas DataFrame (print() and .head())
 
-#  Loading Files with Summary or Meta Data
+##  Loading Files with Summary or Meta Data
 
 Load either of the files Zipcode_Demos.csv or Zipcode_Demos.xlsx. What's going on with this dataset? Clean it up into a useable format and describe the nuances of how the data is currently formatted.
 
@@ -23,9 +23,7 @@ All data files are stored in a folder titled 'Data'.
 #Your code here
 ```
 
-## Level Up (Optional)
-
-### Loading Corrupt CSV files
+## Level Up (Optional) - Loading Corrupt CSV files
 
 Occasionally, you encountered some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
 
@@ -51,3 +49,7 @@ except Exception as e:
 ```python
 #Your code here
 ```
+
+## Summary
+
+Congratulations, you now practiced your pandas-importing skills!
