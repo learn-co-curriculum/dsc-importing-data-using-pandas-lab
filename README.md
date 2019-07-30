@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, you'll get some practice with loading files with summary or metadata, and if you find that easy, the optional "level up" content covers loading data from a corrupted csv file!
+In this lab, you'll get some practice with loading files with summary or metadata, and if you find that easy, the optional "level up" content covers loading data from a corrupted .csv file!
 
 ## Objectives
 You will be able to:
