@@ -753,14 +753,6 @@ except Exception as e:
 ```
 
 
-      File "<ipython-input-10-13f6e15364f1>", line 4
-        except Exception as e:
-             ^
-    IndentationError: expected an indented block
-
-
-
-
 ```python
 # __SOLUTION__ 
 #Your code here
