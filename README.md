@@ -29,19 +29,6 @@ All data files are stored in a folder titled 'Data'.
 import pandas as pd
 ```
 
-## Level Up (Optional) - Loading Corrupt CSV files
-
-Occasionally, you encountered some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
-
-ReviewerID,Rating,N_reviews,Review,VenueID
-123456,4,137,This restaurant was pretty good, we had a great time.,98765
-
-Which should be saved like this if it were a csv (to avoid confusion with the commas in the Review text):
-"ReviewerID","Rating","N_reviews","Review","VenueID"
-"123456","4","137","This restaurant was pretty good, we had a great time.","98765"
-
-Attempt to import the corrupt file, or at least a small preview of it. It is appropriately titled Yelp_Reviews_corrupt.csv. Investigate some of the intricacies of skipping rows to then pass over this error and comment on what you think is going on.
-
 
 ```python
 # __SOLUTION__ 
@@ -223,15 +210,6 @@ df.head()
 
 
 ```python
-#Hint: here's a useful programming pattern to use.
-try:
-    #do something
-except Exception as e:
-    #handle your exception e
-```
-
-
-```python
 # __SOLUTION__ 
 df.tail()
 ```
@@ -410,12 +388,11 @@ df.tail()
 
 
 ```python
-#Your code here
+# __SOLUTION__ 
+# Comment: Dataframe is really two table views, one on top of the other. 
+# The first is a summary view of the raw data below. 
+# There is also a blank row at row 1 in the file.
 ```
-
-## Summary
-
-Congratulations, you now practiced your pandas-importing skills!
 
 
 ```python
@@ -753,9 +730,21 @@ df2.head()
 
 
 
+## Level Up (Optional) - Loading Corrupt CSV files
+
+Occasionally, you encountered some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
+
+ReviewerID,Rating,N_reviews,Review,VenueID
+123456,4,137,This restaurant was pretty good, we had a great time.,98765
+
+Which should be saved like this if it were a csv (to avoid confusion with the commas in the Review text):
+"ReviewerID","Rating","N_reviews","Review","VenueID"
+"123456","4","137","This restaurant was pretty good, we had a great time.","98765"
+
+Attempt to import the corrupt file, or at least a small preview of it. It is appropriately titled Yelp_Reviews_corrupt.csv. Investigate some of the intricacies of skipping rows to then pass over this error and comment on what you think is going on.
+
 
 ```python
-# __SOLUTION__ 
 #Hint: here's a useful programming pattern to use.
 try:
     #do something
@@ -764,7 +753,7 @@ except Exception as e:
 ```
 
 
-      File "<ipython-input-8-13f6e15364f1>", line 4
+      File "<ipython-input-10-13f6e15364f1>", line 4
         except Exception as e:
              ^
     IndentationError: expected an indented block
@@ -1156,42 +1145,43 @@ temp.head()
 
     ParserError                               Traceback (most recent call last)
 
-    <ipython-input-13-6c179a8f3c47> in <module>()
-    ----> 1 temp = pd.read_csv('Data/Yelp_Reviews_Corrupt.csv')
-          2 print(len(temp))
-          3 temp.head()
+    <ipython-input-15-d6af0e7ded24> in <module>()
+          1 # __SOLUTION__
+    ----> 2 temp = pd.read_csv('Data/Yelp_Reviews_Corrupt.csv')
+          3 print(len(temp))
+          4 temp.head()
 
 
-    /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, escapechar, comment, encoding, dialect, tupleize_cols, error_bad_lines, warn_bad_lines, skipfooter, skip_footer, doublequote, delim_whitespace, as_recarray, compact_ints, use_unsigned, low_memory, buffer_lines, memory_map, float_precision)
-        707                     skip_blank_lines=skip_blank_lines)
-        708 
-    --> 709         return _read(filepath_or_buffer, kwds)
-        710 
-        711     parser_f.__name__ = name
+    ~/anaconda3/lib/python3.6/site-packages/pandas/io/parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)
+        683         )
+        684 
+    --> 685         return _read(filepath_or_buffer, kwds)
+        686 
+        687     parser_f.__name__ = name
 
 
-    /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in _read(filepath_or_buffer, kwds)
-        453 
-        454     try:
-    --> 455         data = parser.read(nrows)
-        456     finally:
-        457         parser.close()
+    ~/anaconda3/lib/python3.6/site-packages/pandas/io/parsers.py in _read(filepath_or_buffer, kwds)
+        461 
+        462     try:
+    --> 463         data = parser.read(nrows)
+        464     finally:
+        465         parser.close()
 
 
-    /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in read(self, nrows)
-       1067                 raise ValueError('skipfooter not supported for iteration')
-       1068 
-    -> 1069         ret = self._engine.read(nrows)
-       1070 
-       1071         if self.options.get('as_recarray'):
+    ~/anaconda3/lib/python3.6/site-packages/pandas/io/parsers.py in read(self, nrows)
+       1152     def read(self, nrows=None):
+       1153         nrows = _validate_integer("nrows", nrows)
+    -> 1154         ret = self._engine.read(nrows)
+       1155 
+       1156         # May alter columns / col_dict
 
 
-    /usr/local/lib/python3.6/site-packages/pandas/io/parsers.py in read(self, nrows)
-       1837     def read(self, nrows=None):
-       1838         try:
-    -> 1839             data = self._reader.read(nrows)
-       1840         except StopIteration:
-       1841             if self._first_chunk:
+    ~/anaconda3/lib/python3.6/site-packages/pandas/io/parsers.py in read(self, nrows)
+       2046     def read(self, nrows=None):
+       2047         try:
+    -> 2048             data = self._reader.read(nrows)
+       2049         except StopIteration:
+       2050             if self._first_chunk:
 
 
     pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader.read()
@@ -2168,3 +2158,7 @@ pd.read_csv('Data/Yelp_Reviews_Corrupt.csv', skiprows=len(df1)+len(df2), names=d
 </div>
 
 
+
+## Summary
+
+Congratulations, you now practiced your pandas-importing skills!
