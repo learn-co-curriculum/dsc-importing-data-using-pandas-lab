@@ -46,9 +46,12 @@ except Exception as e:
 ```
 
 
-```python
-#Your code here
-```
+      File "<ipython-input-10-13f6e15364f1>", line 4
+        except Exception as e:
+             ^
+    IndentationError: expected an indented block
+
+
 
 ## Summary
 
