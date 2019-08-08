@@ -719,7 +719,7 @@ df2.head()
 
 ## Level Up (Optional) - Loading Corrupt CSV files
 
-Occasionally, you encountered some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
+Occasionally, you encounter some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
 
 ReviewerID,Rating,N_reviews,Review,VenueID
 123456,4,137,This restaurant was pretty good, we had a great time.,98765
