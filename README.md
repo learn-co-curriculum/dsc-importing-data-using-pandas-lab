@@ -7,8 +7,8 @@ In this lab, you'll get some practice with loading files with summary or metadat
 
 ## Objectives
 You will be able to:
-* Import data from csv files and Excel files
-* Save information to csv and Excel files
+- Import data from csv files and Excel files
+- Save information to csv and Excel files
 
 ##  Loading Files with Summary or Meta Data
 
@@ -754,7 +754,7 @@ df2.head()
 
 ## Level Up (Optional) - Loading Corrupt CSV files
 
-Occasionally, you encounter some really ill formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and commas within those fields themselves. For example, we could have a table like this:  
+Occasionally, you encounter some really ill-formatted data. One example of this can be data that has strings containing commas in a csv file. Under the standard protocol, when this occurs, one is supposed to use quotes to differentiate between the commas denoting fields and the commas within those fields themselves. For example, we could have a table like this:  
 
 `ReviewerID,Rating,N_reviews,Review,VenueID
 123456,4,137,This restaurant was pretty good, we had a great time.,98765`
@@ -2175,4 +2175,4 @@ pd.read_csv('Data/Yelp_Reviews_Corrupt.csv', skiprows=len(df1)+len(df2), names=d
 
 ## Summary
 
-Congratulations, you now practiced your pandas-importing skills!
+Congratulations, you now practiced your Pandas-importing skills!
