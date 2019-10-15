@@ -7,8 +7,9 @@ In this lab, you'll get some practice with loading files with summary or metadat
 
 ## Objectives
 You will be able to:
-- Import data from csv files and Excel files
-- Save information to csv and Excel files
+
+- Use pandas to import data from a CSV and and an Excel  spreadsheet  
+- Use pandas to export a DataFrame to a file
 
 ##  Loading Files with Summary or Meta Data
 
@@ -18,11 +19,13 @@ All data files are stored in a folder titled `'Data'`.
 
 
 ```python
+# Import pandas using the standard alias
 import pandas as pd
 ```
 
 
 ```python
+# Import the file and print the first 5 rows
 df = pd.read_csv('Data/Zipcode_Demos.csv')
 df.head()
 ```
@@ -201,6 +204,7 @@ df.head()
 
 
 ```python
+# Print the last 5 rows of df
 df.tail()
 ```
 
@@ -385,6 +389,7 @@ df.tail()
 
 
 ```python
+# Clean up the dataset
 prev_count = 10**3
 for row in df.index:
     count = 0
@@ -402,7 +407,8 @@ for row in df.index:
 
 
 ```python
-df1 = pd.read_csv('Data/Zipcode_Demos.csv', skiprows=[1], nrows=45, usecols=[0,1,2])
+# Import the first part of the data
+df1 = pd.read_csv('Data/Zipcode_Demos.csv', skiprows=[1], nrows=45, usecols=[0, 1, 2])
 df1.head()
 ```
 
@@ -471,6 +477,7 @@ df1.head()
 
 
 ```python
+# Look at the last five rows
 df1.tail()
 ```
 
@@ -539,6 +546,7 @@ df1.tail()
 
 
 ```python
+# Import the second part of the data
 df2 = pd.read_csv('Data/Zipcode_Demos.csv', skiprows=47)
 df2.head()
 ```
@@ -730,7 +738,7 @@ Attempt to import the corrupt file, or at least a small preview of it. It is app
 
 
 ```python
-#Your code here
+# Your code here
 try:
     df = pd.read_csv('Data/Yelp_Reviews_Corrupt.csv')
 except Exception as e:
