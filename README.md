@@ -7,8 +7,9 @@ In this lab, you'll get some practice with loading files with summary or metadat
 
 ## Objectives
 You will be able to:
-- Import data from csv files and Excel files
-- Save information to csv and Excel files
+
+- Use pandas to import data from a CSV and and an Excel  spreadsheet  
+- Use pandas to export a DataFrame to a file
 
 ##  Loading Files with Summary or Meta Data
 
@@ -42,7 +43,8 @@ df = None
 
 
 ```python
-# Your code here - Clean up the data set
+# Clean up the dataset
+
 ```
 
 ## Level Up (Optional) - Loading Corrupt CSV files
@@ -60,11 +62,11 @@ Attempt to import the corrupt file, or at least a small preview of it. It is app
 
 
 ```python
-#Hint: here's a useful programming pattern to use.
+# Hint: Here's a useful programming pattern to use
 try:
-    #do something
+    # Do something
 except Exception as e:
-    #handle your exception e
+    # Handle your exception e
 ```
 
 ## Summary
