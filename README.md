@@ -7,8 +7,9 @@ In this lab, you'll get some practice with loading files with summary or metadat
 
 ## Objectives
 You will be able to:
-- Import data from csv files and Excel files
-- Save information to csv and Excel files
+
+- Use pandas to import data from a CSV and and an Excel  spreadsheet  
+- Use pandas to export a DataFrame to a file
 
 ##  Loading Files with Summary or Meta Data
 
@@ -25,6 +26,7 @@ All data files are stored in a folder titled `'Data'`.
 
 ```python
 # __SOLUTION__ 
+# Import pandas using the standard alias
 import pandas as pd
 ```
 
@@ -38,6 +40,7 @@ df = None
 
 ```python
 # __SOLUTION__ 
+# Import the file and print the first 5 rows
 df = pd.read_csv('Data/Zipcode_Demos.csv')
 df.head()
 ```
@@ -223,6 +226,7 @@ df.head()
 
 ```python
 # __SOLUTION__ 
+# Print the last 5 rows of df
 df.tail()
 ```
 
@@ -413,12 +417,14 @@ df.tail()
 
 
 ```python
-# Your code here - Clean up the data set
+# Clean up the dataset
+
 ```
 
 
 ```python
 # __SOLUTION__ 
+# Clean up the dataset
 prev_count = 10**3
 for row in df.index:
     count = 0
@@ -437,7 +443,8 @@ for row in df.index:
 
 ```python
 # __SOLUTION__ 
-df1 = pd.read_csv('Data/Zipcode_Demos.csv', skiprows=[1], nrows=45, usecols=[0,1,2])
+# Import the first part of the data
+df1 = pd.read_csv('Data/Zipcode_Demos.csv', skiprows=[1], nrows=45, usecols=[0, 1, 2])
 df1.head()
 ```
 
@@ -507,6 +514,7 @@ df1.head()
 
 ```python
 # __SOLUTION__ 
+# Look at the last five rows
 df1.tail()
 ```
 
@@ -576,6 +584,7 @@ df1.tail()
 
 ```python
 # __SOLUTION__ 
+# Import the second part of the data
 df2 = pd.read_csv('Data/Zipcode_Demos.csv', skiprows=47)
 df2.head()
 ```
@@ -767,17 +776,17 @@ Attempt to import the corrupt file, or at least a small preview of it. It is app
 
 
 ```python
-#Hint: here's a useful programming pattern to use.
+# Hint: Here's a useful programming pattern to use
 try:
-    #do something
+    # Do something
 except Exception as e:
-    #handle your exception e
+    # Handle your exception e
 ```
 
 
 ```python
 # __SOLUTION__ 
-#Your code here
+# Your code here
 try:
     df = pd.read_csv('Data/Yelp_Reviews_Corrupt.csv')
 except Exception as e:
