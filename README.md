@@ -8,8 +8,7 @@ In this lab, you'll get some practice with loading files with summary or metadat
 ## Objectives
 You will be able to:
 
-- Use pandas to import data from a CSV and and an Excel  spreadsheet  
-- Use pandas to export a DataFrame to a file
+- Use pandas to import data from a CSV and and an Excel spreadsheet  
 
 ##  Loading Files with Summary or Meta Data
 
