@@ -57,7 +57,7 @@ Which should be saved like this if it were a csv (to avoid confusion with the co
 `"ReviewerID","Rating","N_reviews","Review","VenueID"
 "123456","4","137","This restaurant was pretty good, we had a great time.","98765"`
 
-Attempt to import the corrupt file, or at least a small preview of it. It is appropriately titled `'Yelp_Reviews_corrupt.csv'`. Investigate some of the intricacies of skipping rows to then pass over this error and comment on what you think is going on.
+Attempt to import the corrupt file, or at least a small preview of it. It is appropriately titled `'Yelp_Reviews_Corrupt.csv'`. Investigate some of the intricacies of skipping rows to then pass over this error and comment on what you think is going on.
 
 
 ```python
